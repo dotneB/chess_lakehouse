@@ -1,0 +1,80 @@
+openings_dataset_version: "2026-01-05"
+chess_ext_version: "0.3.0-local-2"
+
+# lumbrasgigabase last scan: 2026-02-04
+sources:
+  # Online datasets
+  lumbras_online_1995_2009:
+    mega: "gpoyCIxB#iYSuKRtJekGYzbJ6xGSA-LbSg6IXp9W0zM6Zrf_j9aE"
+    category: "Online"
+  lumbras_online_2010_2014:
+    mega: "xlxHiABa#3by7ZAApVR2WIF1BdOI81Ld1sZLWoCjF1aQU42GH5VA"
+    category: "Online"
+  lumbras_online_2015_2019:
+    mega: "N5h10ahK#9GeN1491qTBRXC-Sy3K7ex5g-zrsAoCtKS7DGVKCAHM"
+    category: "Online"
+  lumbras_online_2020:
+    mega: "Eo4QjahT#9hfMIxqmCQVcQ9SvsyD6KyBDdjvOOLUlbM_v6VleT7M"
+    category: "Online"
+  lumbras_online_2021:
+    mega: "kohSSLIA#fe77U0dT6kK3gTjAKangN1kyQJEIVyIjrogZ5YufWIA"
+    category: "Online"
+  lumbras_online_2022:
+    mega: "tpZAEZBQ#xQ6Uj6E7SVaOcYOhNQ3uegeqd3pZWAKkOcKZXsru9As"
+    category: "Online"
+  lumbras_online_2023:
+    mega: "Ish2zArD#LzmV9LqX7oWL3d6u-_C2v_4Ty1h6Ug1MajB7HelXDpA"
+    category: "Online"
+  lumbras_online_2024:
+    mega: "V4ADSKDZ#d794fvofFuSZCo3-wnF5dxUfDJ5AOXjb0isFiE-wrKM"
+    category: "Online"
+  lumbras_online_2025:
+    mega: "cxJBmbgJ#DVk7wBgq357ViguAwYcBthfJ1z6FdKU9IEQm5uwicTE"
+    category: "Online"
+  lumbras_online_2026_01:
+    mega: "4ggwCTiY#b-i0yhoGOhgxJJWYrBq1EvOjhl4djAxDgCRWPMJemQQ"
+    category: "Online"
+  lumbras_online_2026_02:
+    mega: "4ggwCTiY#b-i0yhoGOhgxJJWYrBq1EvOjhl4djAxDgCRWPMJemQQ"
+    category: "Online"
+
+  # OTB datasets
+  #lumbras_otb_nodate:
+  #  mega: "olQ2yK5C#iS-0HH_HNNYLeRWfro97VqOcpvmenfTrHNPqrjunI8Q"
+  #  category: "OTB"
+  lumbras_otb_0001_1899:
+    mega: "Y4IEmZpS#pI_2GJMC7VicfxSF-o6VIi-82dtm3xKJEBv9ddzJv3w"
+    category: "OTB"
+  lumbras_otb_1900_1949:
+    mega: "Ns4CQJ7T#xlmsKPpAkGJNSKLencrH3hrodW94npGpyAumf7aUoCs"
+    category: "OTB"
+  lumbras_otb_1950_1969:
+    mega: "l5pilDjQ#PBvFACl_pfxHG1Ic-rTDTIfaF63CGZq6MfoBI3VkUgU"
+    category: "OTB"
+  lumbras_otb_1970_1989:
+    mega: "cloRgQYQ#T0GuPu1Bj1AlrVIfk565ANoJHyBSqmr2wgdkrELtxZ4"
+    category: "OTB"
+  lumbras_otb_1990_1999:
+    mega: "k8wxiSpZ#Yy0_l6XFpmBrHEJOh9Hv2akY6SQP0FXrqRKhJHFqXrg"
+    category: "OTB"
+  lumbras_otb_2000_2004:
+    mega: "B1hjAKjC#p2M1uf1GEIRk7QYpV3Srwqk0M0MNdK-wfbDwaiZ1LL8"
+    category: "OTB"
+  lumbras_otb_2005_2009:
+    mega: "dwplhJyI#XOfp-GnFqP1kgn9wD34WkCq53e-Rqc20spAOONxIkZ4"
+    category: "OTB"
+  lumbras_otb_2010_2014:
+    mega: "IwgA3ZJA#qSMnlFrhFbYBQwPEirnnW95UKQn5VWO7BBte4p6fVXs"
+    category: "OTB"
+  lumbras_otb_2015_2019:
+    mega: "5tAw1SpQ#BZ6nMYJVeWkIDUuvk-MBxoe3F7sYhMrxnCRUFMyUpEQ"
+    category: "OTB"
+  lumbras_otb_2020_2024:
+    mega: "BgQGXR5J#Qnx74DNyfycTtbs3Qf5_K_Z-HujCgJZXnsAq8H7wGXU"
+    category: "OTB"
+  lumbras_otb_2025:
+    mega: "d1QQEZoS#lTrrVOizYz7ZfynJb3m8Kd_ryKgb2AFirFtPL1oNnXA"
+    category: "OTB"
+  lumbras_otb_2026_partial:
+    mega: "lwZTEZ5L#Om63wzmebool8zw5vbHFnTjFnUqHMP_edglRDaL7EIE"
+    category: "OTB"

@@ -1,0 +1,37 @@
+schema: spec-driven
+
+context: |
+  Project: chess-lakehouse
+  Runtime: TypeScript (ESM) scripts executed with Bun.
+  Data pipeline: DVC stages in `dvc.yaml` orchestrate scripts in `src/` and shell tools
+  like `duckdb`, `mega-get`, and `7z`.
+
+  Key paths:
+  - Input PGNs: `data/pgn/<source>/`
+  - Raw DuckDB outputs: `data/duckdb-raw/<source>/`
+  - Enriched DuckDB outputs: `data/duckdb-enriched/<category>/<source>/`
+  - Parquet outputs: `data/parquet/<category>/` (partitioned by year/month)
+
+  Conventions:
+  - CLI parsing via `util.parseArgs`
+  - Missing required args fail fast by throwing `Error` with a usage string
+  - DuckDB invoked via CLI: `duckdb <db> -c <sql>`
+  - SQL paths prefer forward slashes; string literals escape single quotes
+
+  Guidance for specs in this repo:
+  - Prefer pipeline contracts (inputs/outputs, transformations, invariants) over implementation detail.
+  - Capture DVC behaviors (reproducibility, clean outputs, stage boundaries).
+  - Treat scripts as stage implementations; specs describe the stage, not the exact SQL/printing.
+
+rules:
+  proposal:
+    - Reference the DVC stage(s) and script(s) affected.
+    - Keep scope small and make inputs/outputs explicit.
+  specs:
+    - Specify pipeline contracts: inputs, outputs, transformations, and invariants.
+    - Prefer DVC-level requirements (stage boundaries, deterministic outputs) over exact log text.
+    - Use GIVEN/WHEN/THEN scenarios; include at least one failure scenario.
+  design:
+    - Prefer minimal changes; note impacts to DVC reproducibility and output stability.
+  tasks:
+    - Include a verification step. Never run `dvc repro` yourself. ALWAYS ask the user to run it and confirm.

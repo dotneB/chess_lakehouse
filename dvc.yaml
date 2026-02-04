@@ -1,0 +1,62 @@
+stages:
+  openings_db:
+    cmd: duckdb data/openings.duckdb -c "CREATE TABLE IF NOT EXISTS openings AS SELECT * FROM 'hf://datasets/Lichess/chess-openings/**/*.parquet';"
+    params:
+        - openings_dataset_version
+    outs:
+      - data/openings.duckdb
+
+  download:
+    foreach: ${sources}
+    do:
+      cmd: mega-get "https://mega.nz/file/${item.mega}" "data/downloaded/${key}.7z"
+      outs:
+        - data/downloaded/${key}.7z
+
+  unzip:
+    foreach: ${sources}
+    do:
+      cmd: 7z x "data/downloaded/${key}.7z" -o"data/pgn/${key}" -y -bsp0 -bso0
+      deps:
+        - data/downloaded/${key}.7z
+      outs:
+        - data/pgn/${key}/
+
+  read_pgn:
+    foreach: ${sources}
+    do:
+      cmd: bun run src/read-pgn.ts --key ${key} --inDir data/pgn/${key} --outDir data/duckdb-raw/${key}
+      params:
+        - chess_ext_version
+      deps:
+        - src/read-pgn.ts
+        - src/lib/pipeline-utils.ts
+        - data/pgn/${key}/
+      outs:
+        - data/duckdb-raw/${key}/
+
+  find_openings:
+    foreach: ${sources}
+    do:
+      cmd: bun run src/find-openings.ts --key ${key} --inDir data/duckdb-raw/${key} --outDir data/duckdb-enriched/${key} --openingsDb data/openings.duckdb --dataSource LumbrasGigabase_${item.category}
+      params:
+        - chess_ext_version
+      deps:
+        - src/find-openings.ts
+        - src/lib/pipeline-utils.ts
+        - data/openings.duckdb
+        - data/duckdb-raw/${key}/
+      outs:
+        - data/duckdb-enriched/${key}/
+
+  export_parquet:
+    cmd: bun run src/export-to-parquet.ts --inDir data/duckdb-enriched --outDir data/parquet/exported --outDb data/parquet/combined.duckdb
+    params:
+      - chess_ext_version
+    deps:
+      - src/export-to-parquet.ts
+      - src/lib/pipeline-utils.ts
+      - data/duckdb-enriched/
+    outs:
+      - data/parquet/combined.duckdb
+      - data/parquet/exported/

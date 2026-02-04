@@ -1,0 +1,8 @@
+.opencode/
+WORKBENCH.md
+data/
+
+node_modules/
+
+.env
+/logs.md
