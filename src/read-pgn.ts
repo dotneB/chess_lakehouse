@@ -45,7 +45,7 @@ async function readOnePgn(params: {
   const sql = [
     "LOAD chess;",
     "CREATE TABLE IF NOT EXISTS games AS",
-    "SELECT *, chess_moves_normalize(movetext) AS clean_movetext",
+    "SELECT *, chess_moves_normalize(movetext) AS clean_movetext, chess_timecontrol_normalize(timecontrol) AS clean_timecontrol,",
     `FROM read_pgn('${sqlStringLiteral(params.pgnPath)}');`,
   ].join("\n");
 

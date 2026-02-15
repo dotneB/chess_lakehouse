@@ -82,7 +82,7 @@ for (const db of dbs) {
       "  ECO,",
       "  Opening,",
       "  Termination,",
-      "  TimeControl,",
+      "  COALESCE(clean_timecontrol, TimeControl) AS TimeControl,",
       "  Source,",
       "  movetext,",
       dataSourceSelect,

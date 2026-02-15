@@ -73,16 +73,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_1995_2009/
       hash: md5
-      md5: 3a515a7bbd53f1e4fdc2c1cf977a3c27.dir
-      size: 2109440
+      md5: 9c8a83175c7efdb1d6899031aafc6f72.dir
+      size: 3158016
       nfiles: 1
   read_pgn@lumbras_otb_2010_2014:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_2010_2014 --inDir 
@@ -100,16 +100,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2010_2014/
       hash: md5
-      md5: 865eb3eeb6d9a44d13f740012111db29.dir
-      size: 1223700480
+      md5: 152f410a3ea51752d040f045b68a3792.dir
+      size: 1225797632
       nfiles: 1
   find_openings@lumbras_online_1995_2009:
     cmd: bun run src/find-openings.ts --key lumbras_online_1995_2009 --inDir 
@@ -119,8 +119,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_1995_2009/
       hash: md5
-      md5: 3a515a7bbd53f1e4fdc2c1cf977a3c27.dir
-      size: 2109440
+      md5: 9c8a83175c7efdb1d6899031aafc6f72.dir
+      size: 3158016
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -136,12 +136,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_1995_2009/
       hash: md5
-      md5: dd2095f579071b7e25fd94950fb6e914.dir
-      size: 2371584
+      md5: 0915569c9d10791ce956967d713e62c2.dir
+      size: 3420160
       nfiles: 1
   find_openings@lumbras_otb_2010_2014:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2010_2014 --inDir 
@@ -151,8 +151,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2010_2014/
       hash: md5
-      md5: 865eb3eeb6d9a44d13f740012111db29.dir
-      size: 1223700480
+      md5: 152f410a3ea51752d040f045b68a3792.dir
+      size: 1225797632
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -168,12 +168,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2010_2014/
       hash: md5
-      md5: 9bf944b12d80de13e9e77ce97f2fc363.dir
-      size: 1229729792
+      md5: b1685fbae35aa05ea781c1da4036932b.dir
+      size: 1231826944
       nfiles: 1
   export_parquet@lumbras_online_1995_2009:
     cmd: bun run src/export-to-parquet.ts --key lumbras_online_1995_2009 --inDir
@@ -252,15 +252,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2010_2014/
       hash: md5
-      md5: 80c7d99a910e4a06ce5a5e1d6079b64e.dir
+      md5: c113e289b1413628837c4ef9e4897077.dir
       size: 798720
       nfiles: 1
   find_openings@lumbras_online_2010_2014:
@@ -271,7 +271,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2010_2014/
       hash: md5
-      md5: 80c7d99a910e4a06ce5a5e1d6079b64e.dir
+      md5: c113e289b1413628837c4ef9e4897077.dir
       size: 798720
       nfiles: 1
     - path: data/openings.duckdb
@@ -288,11 +288,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2010_2014/
       hash: md5
-      md5: 86953c06239bd5d2eb11978b8313e3db.dir
+      md5: 7939001487ca2c1bdc21b8330b9e9305.dir
       size: 1060864
       nfiles: 1
   export_parquet_online:
@@ -396,16 +396,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2005_2009/
       hash: md5
-      md5: c0b3d4878dfb03208c5f280a55ffbef1.dir
-      size: 759967744
+      md5: 237180b95066ced72b6c987f2933d79f.dir
+      size: 761278464
       nfiles: 1
   find_openings@lumbras_otb_2005_2009:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2005_2009 --inDir 
@@ -415,8 +415,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2005_2009/
       hash: md5
-      md5: c0b3d4878dfb03208c5f280a55ffbef1.dir
-      size: 759967744
+      md5: 237180b95066ced72b6c987f2933d79f.dir
+      size: 761278464
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -432,12 +432,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2005_2009/
       hash: md5
-      md5: 30a2419f7e6972a722e2146d98a694ed.dir
-      size: 764948480
+      md5: dde8aaf0c9e0f53e1ada9e48eb068966.dir
+      size: 766259200
       nfiles: 1
   download@lumbras_otb_2015_2019:
     cmd: mega-get 
@@ -478,16 +478,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2015_2019/
       hash: md5
-      md5: ec34ca4a66c72878dec64fa01d1c2c73.dir
-      size: 1235759104
+      md5: fc4dbea3aae4fb65aeb4d2c72981f3e4.dir
+      size: 1236021248
       nfiles: 1
   find_openings@lumbras_otb_2015_2019:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2015_2019 --inDir 
@@ -497,8 +497,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2015_2019/
       hash: md5
-      md5: ec34ca4a66c72878dec64fa01d1c2c73.dir
-      size: 1235759104
+      md5: fc4dbea3aae4fb65aeb4d2c72981f3e4.dir
+      size: 1236021248
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -514,12 +514,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2015_2019/
       hash: md5
-      md5: c17ca8c8f9a7589a80f9a3eac73672da.dir
-      size: 1241788416
+      md5: c285ee32cbc9cc8a570fee8cbf66e480.dir
+      size: 1241526272
       nfiles: 1
   download@lumbras_online_2020:
     cmd: mega-get 
@@ -605,15 +605,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2020/
       hash: md5
-      md5: 88d211b23152408a2082d2814fd75ca3.dir
+      md5: 6e84b46a1d8d80b061dbc15318d6ed44.dir
       size: 301215744
       nfiles: 1
   read_pgn@lumbras_online_2021:
@@ -631,16 +631,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2021/
       hash: md5
-      md5: 0413631e7aaa6a3968e2ff80d2bacf8a.dir
-      size: 536358912
+      md5: b5bb703afe87b2af86560b9cae6ed0dd.dir
+      size: 534523904
       nfiles: 1
   read_pgn@lumbras_online_2022:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2022 --inDir 
@@ -657,16 +657,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2022/
       hash: md5
-      md5: 4a75c3c898b536e4901221f019ee1439.dir
-      size: 703606784
+      md5: 3e6b1d289863722831f09e22daec69a1.dir
+      size: 705179648
       nfiles: 1
   find_openings@lumbras_online_2020:
     cmd: bun run src/find-openings.ts --key lumbras_online_2020 --inDir 
@@ -676,7 +676,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2020/
       hash: md5
-      md5: 88d211b23152408a2082d2814fd75ca3.dir
+      md5: 6e84b46a1d8d80b061dbc15318d6ed44.dir
       size: 301215744
       nfiles: 1
     - path: data/openings.duckdb
@@ -693,12 +693,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2020/
       hash: md5
-      md5: 3e4553ecf5fbe7892ad8ab3857f80a5d.dir
-      size: 303312896
+      md5: d9bb36986e0a0b9f2809578cd36cebb0.dir
+      size: 303050752
       nfiles: 1
   find_openings@lumbras_online_2021:
     cmd: bun run src/find-openings.ts --key lumbras_online_2021 --inDir 
@@ -708,8 +708,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2021/
       hash: md5
-      md5: 0413631e7aaa6a3968e2ff80d2bacf8a.dir
-      size: 536358912
+      md5: b5bb703afe87b2af86560b9cae6ed0dd.dir
+      size: 534523904
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -725,12 +725,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2021/
       hash: md5
-      md5: 47d5e2f1936edad5dd9e5d3f128c5ab2.dir
-      size: 540553216
+      md5: 0291197e5036ac87697fb050eafe66d9.dir
+      size: 538980352
       nfiles: 1
   find_openings@lumbras_online_2022:
     cmd: bun run src/find-openings.ts --key lumbras_online_2022 --inDir 
@@ -740,8 +740,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2022/
       hash: md5
-      md5: 4a75c3c898b536e4901221f019ee1439.dir
-      size: 703606784
+      md5: 3e6b1d289863722831f09e22daec69a1.dir
+      size: 705179648
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -757,12 +757,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2022/
       hash: md5
-      md5: 908f33eb8248573d4574f8c7c34bb876.dir
-      size: 708587520
+      md5: 0b47f508f7d9dd7b00673f97f10cb9f3.dir
+      size: 710160384
       nfiles: 1
   download@lumbras_online_2015_2019:
     cmd: mega-get 
@@ -1010,16 +1010,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2015_2019/
       hash: md5
-      md5: 08156053d9180aef44636ea912dc4a7b.dir
-      size: 63713280
+      md5: 345b6674b72b67a71fd490219e4d70e2.dir
+      size: 64761856
       nfiles: 1
   read_pgn@lumbras_online_2023:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2023 --inDir 
@@ -1036,16 +1036,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2023/
       hash: md5
-      md5: 3f5b8380e6b929ecf36e77b2d7289405.dir
-      size: 644624384
+      md5: 605a3a7cf9b02bae5591bf56237365c8.dir
+      size: 641478656
       nfiles: 1
   read_pgn@lumbras_online_2024:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2024 --inDir 
@@ -1062,16 +1062,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2024/
       hash: md5
-      md5: 4aa41581cc92e7471bc1fbd1bffce15b.dir
-      size: 1589391360
+      md5: 830fe71a85126441b4a1999feffafca4.dir
+      size: 1589129216
       nfiles: 1
   read_pgn@lumbras_online_2025:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2025 --inDir 
@@ -1088,16 +1088,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2025/
       hash: md5
-      md5: 7fcb2bbeaba0523ef48e6479a7b5965d.dir
-      size: 905457664
+      md5: fb178f19190ebb06024d8ecde5cf873a.dir
+      size: 905981952
       nfiles: 1
   read_pgn@lumbras_online_2026_01:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2026_01 --inDir 
@@ -1115,16 +1115,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2026_01/
       hash: md5
-      md5: 8399af206bcfa37b4f7f66fd51df2d95.dir
-      size: 11022336
+      md5: 42e04e2bfd74e7ca357fedac69b5611f.dir
+      size: 11284480
       nfiles: 1
   read_pgn@lumbras_online_2026_02:
     cmd: bun run src/read-pgn.ts --key lumbras_online_2026_02 --inDir 
@@ -1142,16 +1142,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_online_2026_02/
       hash: md5
-      md5: 8c0125330a77803c026c1a440f454bcd.dir
-      size: 11022336
+      md5: 1e29300f76983758b1669cb612879880.dir
+      size: 11284480
       nfiles: 1
   read_pgn@lumbras_otb_0001_1899:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_0001_1899 --inDir 
@@ -1169,15 +1169,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_0001_1899/
       hash: md5
-      md5: bbf2fc2b4b121f31de3b529a6d838a0f.dir
+      md5: ac7176c55c018731cfd7ea71cb181054.dir
       size: 8138752
       nfiles: 1
   read_pgn@lumbras_otb_1900_1949:
@@ -1196,16 +1196,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_1900_1949/
       hash: md5
-      md5: 5d1fde6cc4b6379894cf5d898d8a218f.dir
-      size: 35663872
+      md5: 02f5215a826aea98be016d0c0e673115.dir
+      size: 35401728
       nfiles: 1
   read_pgn@lumbras_otb_1950_1969:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_1950_1969 --inDir 
@@ -1223,15 +1223,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_1950_1969/
       hash: md5
-      md5: 089baadb14a91967eef9645efdf7cf18.dir
+      md5: cb5044c10e5c3581442a993879414f7c.dir
       size: 128987136
       nfiles: 1
   read_pgn@lumbras_otb_1970_1989:
@@ -1250,15 +1250,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_1970_1989/
       hash: md5
-      md5: be23cbca0986baca263d6f8ad1c4fdba.dir
+      md5: a4b92f55d43f99995d154976bcf9c6ca.dir
       size: 395587584
       nfiles: 1
   find_openings@lumbras_online_2015_2019:
@@ -1269,8 +1269,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2015_2019/
       hash: md5
-      md5: 08156053d9180aef44636ea912dc4a7b.dir
-      size: 63713280
+      md5: 345b6674b72b67a71fd490219e4d70e2.dir
+      size: 64761856
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1286,12 +1286,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2015_2019/
       hash: md5
-      md5: 31af7020efae3c4e05e68d7c6044c7cc.dir
-      size: 64499712
+      md5: 59882813c4ee4d848cafbf861ac8ba25.dir
+      size: 65548288
       nfiles: 1
   find_openings@lumbras_online_2023:
     cmd: bun run src/find-openings.ts --key lumbras_online_2023 --inDir 
@@ -1301,8 +1301,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2023/
       hash: md5
-      md5: 3f5b8380e6b929ecf36e77b2d7289405.dir
-      size: 644624384
+      md5: 605a3a7cf9b02bae5591bf56237365c8.dir
+      size: 641478656
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1318,12 +1318,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2023/
       hash: md5
-      md5: d494b1d2d5c423e3c463740e557bec8f.dir
-      size: 649080832
+      md5: f7f46effe822af211f3ba499a5dc2e30.dir
+      size: 646197248
       nfiles: 1
   find_openings@lumbras_online_2024:
     cmd: bun run src/find-openings.ts --key lumbras_online_2024 --inDir 
@@ -1333,8 +1333,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2024/
       hash: md5
-      md5: 4aa41581cc92e7471bc1fbd1bffce15b.dir
-      size: 1589391360
+      md5: 830fe71a85126441b4a1999feffafca4.dir
+      size: 1589129216
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1350,11 +1350,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2024/
       hash: md5
-      md5: e8a69177efe25bcbe05a3c5354daf24b.dir
+      md5: a432f3dce60724292b055ccfc3673fe2.dir
       size: 1595420672
       nfiles: 1
   find_openings@lumbras_online_2025:
@@ -1365,8 +1365,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2025/
       hash: md5
-      md5: 7fcb2bbeaba0523ef48e6479a7b5965d.dir
-      size: 905457664
+      md5: fb178f19190ebb06024d8ecde5cf873a.dir
+      size: 905981952
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1382,12 +1382,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2025/
       hash: md5
-      md5: f0f6420e004cba440d761008dad44231.dir
-      size: 909127680
+      md5: bbbc075f8ad7a3d1c539e323b203f23b.dir
+      size: 909651968
       nfiles: 1
   find_openings@lumbras_online_2026_01:
     cmd: bun run src/find-openings.ts --key lumbras_online_2026_01 --inDir 
@@ -1397,8 +1397,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2026_01/
       hash: md5
-      md5: 8399af206bcfa37b4f7f66fd51df2d95.dir
-      size: 11022336
+      md5: 42e04e2bfd74e7ca357fedac69b5611f.dir
+      size: 11284480
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1414,12 +1414,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2026_01/
       hash: md5
-      md5: 377327757f6d7627fc75ff8330741183.dir
-      size: 11284480
+      md5: 9d20d4d4eb3f6f3d7e891396ee6fad08.dir
+      size: 11546624
       nfiles: 1
   find_openings@lumbras_online_2026_02:
     cmd: bun run src/find-openings.ts --key lumbras_online_2026_02 --inDir 
@@ -1429,8 +1429,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_online_2026_02/
       hash: md5
-      md5: 8c0125330a77803c026c1a440f454bcd.dir
-      size: 11022336
+      md5: 1e29300f76983758b1669cb612879880.dir
+      size: 11284480
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1446,12 +1446,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_online_2026_02/
       hash: md5
-      md5: 4fb834805b58393938c6658f513b3219.dir
-      size: 11284480
+      md5: 4b48af33349a5cfb96395770646ea181.dir
+      size: 11546624
       nfiles: 1
   find_openings@lumbras_otb_0001_1899:
     cmd: bun run src/find-openings.ts --key lumbras_otb_0001_1899 --inDir 
@@ -1461,7 +1461,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_0001_1899/
       hash: md5
-      md5: bbf2fc2b4b121f31de3b529a6d838a0f.dir
+      md5: ac7176c55c018731cfd7ea71cb181054.dir
       size: 8138752
       nfiles: 1
     - path: data/openings.duckdb
@@ -1478,11 +1478,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_0001_1899/
       hash: md5
-      md5: ba9997b82a1a0fe7f0063a6c084fa862.dir
+      md5: 723c4d0d8ef83ec8ee9c820c1bdd4129.dir
       size: 8400896
       nfiles: 1
   find_openings@lumbras_otb_1900_1949:
@@ -1493,8 +1493,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_1900_1949/
       hash: md5
-      md5: 5d1fde6cc4b6379894cf5d898d8a218f.dir
-      size: 35663872
+      md5: 02f5215a826aea98be016d0c0e673115.dir
+      size: 35401728
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1510,12 +1510,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_1900_1949/
       hash: md5
-      md5: 4e42a8fab70e921be7815e6d27f1214b.dir
-      size: 36450304
+      md5: 52feaf7eae56c3fbe98a3e8d25f2da85.dir
+      size: 35926016
       nfiles: 1
   find_openings@lumbras_otb_1950_1969:
     cmd: bun run src/find-openings.ts --key lumbras_otb_1950_1969 --inDir 
@@ -1525,7 +1525,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_1950_1969/
       hash: md5
-      md5: 089baadb14a91967eef9645efdf7cf18.dir
+      md5: cb5044c10e5c3581442a993879414f7c.dir
       size: 128987136
       nfiles: 1
     - path: data/openings.duckdb
@@ -1542,11 +1542,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_1950_1969/
       hash: md5
-      md5: 743843191238f06f5adbc6ba112e7698.dir
+      md5: 88f7f880dd7f4d8a4c67d1356542e907.dir
       size: 129773568
       nfiles: 1
   find_openings@lumbras_otb_1970_1989:
@@ -1557,7 +1557,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_1970_1989/
       hash: md5
-      md5: be23cbca0986baca263d6f8ad1c4fdba.dir
+      md5: a4b92f55d43f99995d154976bcf9c6ca.dir
       size: 395587584
       nfiles: 1
     - path: data/openings.duckdb
@@ -1574,11 +1574,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_1970_1989/
       hash: md5
-      md5: 292051b1fd84ee5021318ca18a85297a.dir
+      md5: 32b37cf7b4430f22fc2708702ea59139.dir
       size: 397946880
       nfiles: 1
   read_pgn@lumbras_otb_1990_1999:
@@ -1597,16 +1597,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_1990_1999/
       hash: md5
-      md5: 95a9bba23fd49d21a1d0b56312daa1ea.dir
-      size: 579612672
+      md5: 58b8153197d9523bbcfa0f0bf30467ff.dir
+      size: 578826240
       nfiles: 1
   read_pgn@lumbras_otb_2000_2004:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_2000_2004 --inDir 
@@ -1624,16 +1624,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2000_2004/
       hash: md5
-      md5: 5fc223c4c79a5492db6c323aa2b241e9.dir
-      size: 682897408
+      md5: 6e66e1ce4aa1c59141b980a5719f9e0b.dir
+      size: 684208128
       nfiles: 1
   read_pgn@lumbras_otb_2020_2024:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_2020_2024 --inDir 
@@ -1651,16 +1651,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2020_2024/
       hash: md5
-      md5: 2506bf9c5a7ba9ed69e136fcb1bd05ae.dir
-      size: 850145280
+      md5: b2bcd8ee60cea4ade6f31ba4cc0f9409.dir
+      size: 851980288
       nfiles: 1
   read_pgn@lumbras_otb_2025:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_2025 --inDir 
@@ -1677,16 +1677,16 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2025/
       hash: md5
-      md5: 0c376a7e38a3db8424d5bf70ffa76464.dir
-      size: 236990464
+      md5: 1fd777409c2b35ff9ffd677e8303d796.dir
+      size: 237252608
       nfiles: 1
   read_pgn@lumbras_otb_2026_partial:
     cmd: bun run src/read-pgn.ts --key lumbras_otb_2026_partial --inDir 
@@ -1704,15 +1704,15 @@ stages:
       size: 2867
     - path: src/read-pgn.ts
       hash: md5
-      md5: 92652e8d3ae5eedb6eb49b199e80c2d2
-      size: 1947
+      md5: 46a521b62bb22622f0100be53f817ca0
+      size: 2011
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-raw/lumbras_otb_2026_partial/
       hash: md5
-      md5: c1a5146140f2894beab6cd54cdc7bbec.dir
+      md5: 830dc7ad14eef79e1b72ba4bfbf0ceba.dir
       size: 60305408
       nfiles: 1
   find_openings@lumbras_otb_1990_1999:
@@ -1723,8 +1723,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_1990_1999/
       hash: md5
-      md5: 95a9bba23fd49d21a1d0b56312daa1ea.dir
-      size: 579612672
+      md5: 58b8153197d9523bbcfa0f0bf30467ff.dir
+      size: 578826240
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1740,12 +1740,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_1990_1999/
       hash: md5
-      md5: 3d54fe8313cbbfb3b79cfa8fb47564b9.dir
-      size: 584331264
+      md5: ca2bf3639c772a6e6ea3ca3c0e79189d.dir
+      size: 583544832
       nfiles: 1
   find_openings@lumbras_otb_2000_2004:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2000_2004 --inDir 
@@ -1755,8 +1755,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2000_2004/
       hash: md5
-      md5: 5fc223c4c79a5492db6c323aa2b241e9.dir
-      size: 682897408
+      md5: 6e66e1ce4aa1c59141b980a5719f9e0b.dir
+      size: 684208128
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1772,12 +1772,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2000_2004/
       hash: md5
-      md5: 21a491ccad6740c04204f00d00389f0f.dir
-      size: 687616000
+      md5: cab9702aac87bae31243b5e35aba544c.dir
+      size: 688926720
       nfiles: 1
   find_openings@lumbras_otb_2020_2024:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2020_2024 --inDir 
@@ -1787,8 +1787,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2020_2024/
       hash: md5
-      md5: 2506bf9c5a7ba9ed69e136fcb1bd05ae.dir
-      size: 850145280
+      md5: b2bcd8ee60cea4ade6f31ba4cc0f9409.dir
+      size: 851980288
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1804,12 +1804,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2020_2024/
       hash: md5
-      md5: d89d3da726b2d20b0ed87dd753a3e5b4.dir
-      size: 853553152
+      md5: 8d4029159a30ed71ad3bcdd9612c6a55.dir
+      size: 855388160
       nfiles: 1
   find_openings@lumbras_otb_2025:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2025 --inDir 
@@ -1819,8 +1819,8 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2025/
       hash: md5
-      md5: 0c376a7e38a3db8424d5bf70ffa76464.dir
-      size: 236990464
+      md5: 1fd777409c2b35ff9ffd677e8303d796.dir
+      size: 237252608
       nfiles: 1
     - path: data/openings.duckdb
       hash: md5
@@ -1836,12 +1836,12 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2025/
       hash: md5
-      md5: 78ea9e94bc02eb952bbc16922053d288.dir
-      size: 237776896
+      md5: b5fbcdb962633878cd066f6d3370ae31.dir
+      size: 238039040
       nfiles: 1
   find_openings@lumbras_otb_2026_partial:
     cmd: bun run src/find-openings.ts --key lumbras_otb_2026_partial --inDir 
@@ -1851,7 +1851,7 @@ stages:
     deps:
     - path: data/duckdb-raw/lumbras_otb_2026_partial/
       hash: md5
-      md5: c1a5146140f2894beab6cd54cdc7bbec.dir
+      md5: 830dc7ad14eef79e1b72ba4bfbf0ceba.dir
       size: 60305408
       nfiles: 1
     - path: data/openings.duckdb
@@ -1868,11 +1868,11 @@ stages:
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/duckdb-enriched/lumbras_otb_2026_partial/
       hash: md5
-      md5: 30ae065bb5f117214200c015b4044bff.dir
+      md5: 20f5a23a38e82adf2eff5fc1c2032f45.dir
       size: 60567552
       nfiles: 1
   download@lumbras_otb_1990_1999:
@@ -1996,27 +1996,27 @@ stages:
     deps:
     - path: data/duckdb-enriched/
       hash: md5
-      md5: f3f3bce2a296432a079d11747fbcc8a5.dir
-      size: 11029467136
+      md5: 079fc36d2969ef803671d882cd881c34.dir
+      size: 11034710016
       nfiles: 24
     - path: src/export-to-parquet.ts
       hash: md5
-      md5: 8c2dc939b8af2597b676a890a10d3f79
-      size: 2862
+      md5: 2a161f745994b01410e9055c1c73eec4
+      size: 2906
     - path: src/lib/pipeline-utils.ts
       hash: md5
       md5: ef1e8356222b4648d3dee51180bb44f2
       size: 2867
     params:
       params.yaml:
-        chess_ext_version: 0.3.0-local-2
+        chess_ext_version: 0.4.0-local-1
     outs:
     - path: data/parquet/combined.duckdb
       hash: md5
-      md5: e11b78cfd2c7ce43b1775d3a30256431
-      size: 7702065152
+      md5: 0bc4b3e222d9c052177cf50c2cf6912d
+      size: 7705210880
     - path: data/parquet/exported/
       hash: md5
-      md5: 113b0f2c30fcd325cfcc1adc64455bd6.dir
-      size: 5542811917
-      nfiles: 6516
+      md5: d0249fff592708bed5c52406cce7a305.dir
+      size: 5541850813
+      nfiles: 6499
